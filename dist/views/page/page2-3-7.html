@@ -87,15 +87,24 @@
                                         </tbody>
                                         <tbody>
                                             <td>3</td>
-                                            <td>SUMRY_CN</td>
-                                            <td>요약내용</td>
+                                            <td>THEME_NM</td>
+                                            <td>테마명</td>
                                             <td>VARCHAR</td>
-                                            <td>4000</td>
+                                            <td>200</td>
                                             <td>N</td>
                                             <td>N</td>
                                         </tbody>
                                         <tbody>
                                             <td>4</td>
+                                            <td>LWPRT_THEME_NM</td>
+                                            <td>하위테마명</td>
+                                            <td>VARCHAR</td>
+                                            <td>200</td>
+                                            <td>N</td>
+                                            <td>N</td>
+                                        </tbody>
+                                        <tbody>
+                                            <td>5</td>
                                             <td>CL_NM</td>
                                             <td>분류명</td>
                                             <td>VARCHAR</td>
@@ -104,7 +113,7 @@
                                             <td>N</td>
                                         </tbody>
                                         <tbody>
-                                            <td>5</td>
+                                            <td>6</td>
                                             <td>LWPRT_CL_NM</td>
                                             <td>하위분류명</td>
                                             <td>VARCHAR</td>
@@ -113,18 +122,9 @@
                                             <td>N</td>
                                         </tbody>
                                         <tbody>
-                                            <td>6</td>
-                                            <td>TY_NM</td>
-                                            <td>유형명</td>
-                                            <td>VARCHAR</td>
-                                            <td>200</td>
-                                            <td>N</td>
-                                            <td>N</td>
-                                        </tbody>
-                                        <tbody>
                                             <td>7</td>
-                                            <td>LWPRT_DATA_TY_NM</td>
-                                            <td>하위자료유형명</td>
+                                            <td>SBJT_NM</td>
+                                            <td>주제명</td>
                                             <td>VARCHAR</td>
                                             <td>200</td>
                                             <td>N</td>
@@ -132,8 +132,8 @@
                                         </tbody>
                                         <tbody>
                                             <td>8</td>
-                                            <td>CTPRVN_NM</td>
-                                            <td>시도명</td>
+                                            <td>MIDDL_SBJT_NM</td>
+                                            <td>중주제명</td>
                                             <td>VARCHAR</td>
                                             <td>200</td>
                                             <td>N</td>
@@ -141,42 +141,15 @@
                                         </tbody>
                                         <tbody>
                                             <td>9</td>
-                                            <td>SIGNGU_NM</td>
-                                            <td>시군구명</td>
+                                            <td>SUMRY_CN</td>
+                                            <td>요약내용</td>
                                             <td>VARCHAR</td>
-                                            <td>200</td>
+                                            <td>4000</td>
                                             <td>N</td>
                                             <td>N</td>
                                         </tbody>
                                         <tbody>
                                             <td>10</td>
-                                            <td>REGIST_DE</td>
-                                            <td>등록일자</td>
-                                            <td>VARCHAR</td>
-                                            <td>8</td>
-                                            <td>N</td>
-                                            <td>N</td>
-                                        </tbody>
-                                        <tbody>
-                                            <td>11</td>
-                                            <td>VLM_CO</td>
-                                            <td>권수</td>
-                                            <td>DECIMAL</td>
-                                            <td>38</td>
-                                            <td>N</td>
-                                            <td>N</td>
-                                        </tbody>
-                                        <tbody>
-                                            <td>12</td>
-                                            <td>TOT_PGE_CO</td>
-                                            <td>총페이지수</td>
-                                            <td>DECIMAL</td>
-                                            <td>38</td>
-                                            <td>N</td>
-                                            <td>N</td>
-                                        </tbody>
-                                        <tbody>
-                                            <td>13</td>
                                             <td>MAIN_THUMB_URL</td>
                                             <td>메인썸네일URL</td>
                                             <td>VARCHAR</td>
@@ -185,13 +158,85 @@
                                             <td>N</td>
                                         </tbody>
                                         <tbody>
-                                            <td>14</td>
+                                            <td>11</td>
                                             <td>CNTNTS_URL</td>
                                             <td>콘텐츠URL</td>
                                             <td>VARCHAR</td>
-                                            <td>200</td>
                                             <td>500</td>
+                                            <td>N</td>
                                             <td>Y</td>
+                                        </tbody>
+                                        <tbody>
+                                            <td>12</td>
+                                            <td>CTPRVN_NM</td>
+                                            <td>시도명</td>
+                                            <td>VARCHAR</td>
+                                            <td>200</td>
+                                            <td>N</td>
+                                            <td>N</td>
+                                        </tbody>
+                                        <tbody>
+                                            <td>13</td>
+                                            <td>SIGNGU_NM</td>
+                                            <td>시군구명</td>
+                                            <td>VARCHAR</td>
+                                            <td>200</td>
+                                            <td>N</td>
+                                            <td>N</td>
+                                        </tbody>
+                                        <tbody>
+                                            <td>14</td>
+                                            <td>EMD_NM</td>
+                                            <td>읍면동명</td>
+                                            <td>VARCHAR</td>
+                                            <td>200</td>
+                                            <td>N</td>
+                                            <td>N</td>
+                                        </tbody>
+                                        <tbody>
+                                            <td>15</td>
+                                            <td>ADDR</td>
+                                            <td>주소</td>
+                                            <td>VARCHAR</td>
+                                            <td>500</td>
+                                            <td>N</td>
+                                            <td>N</td>
+                                        </tbody>
+                                        <tbody>
+                                            <td>16</td>
+                                            <td>CTLSTT_LA</td>
+                                            <td>문화시설위도</td>
+                                            <td>VARCHAR</td>
+                                            <td>20</td>
+                                            <td>N</td>
+                                            <td>N</td>
+                                        </tbody>
+                                        <tbody>
+                                            <td>17</td>
+                                            <td>CTLSTT_LO</td>
+                                            <td>문화시설경도</td>
+                                            <td>VARCHAR</td>
+                                            <td>20</td>
+                                            <td>N</td>
+                                            <td>N</td>
+                                        </tbody>
+                                        <tbody>
+                                            <td>18</td>
+                                            <td>AREA_NM_DC_CN</td>
+                                            <td>지역명설명내용</td>
+                                            <td>VARCHAR</td>
+                                            <td>4000</td>
+                                            <td>N</td>
+                                            <td>N</td>
+                                        </tbody>
+                                        <tbody>
+                                            <td>19</td>
+                                            <td>REGIST_DE</td>
+                                            <td>등록일자</td>
+                                            <td>VARCHAR</td>
+                                            <td>8</td>
+                                            <td>N</td>
+                                            <td>N</td>
                                         </tbody>
                                     </table>
                                 </div>
