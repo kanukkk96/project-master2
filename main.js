@@ -25,7 +25,17 @@ var page1_3Router = require('./dist/routes/page1_3.js');
 var page1_4Router = require('./dist/routes/page1_4.js');
 var page2_1Router = require('./dist/routes/page2_1.js');
 var page2_2Router = require('./dist/routes/page2_2.js');
-var page2_3Router = require('./dist/routes/page2_3.js');
+var page2_3_1Router = require('./dist/routes/page2_3_1.js');
+var page2_3_2Router = require('./dist/routes/page2_3_2.js');
+var page2_3_3Router = require('./dist/routes/page2_3_3.js');
+var page2_3_4Router = require('./dist/routes/page2_3_4.js');
+var page2_3_5Router = require('./dist/routes/page2_3_5.js');
+var page2_3_6Router = require('./dist/routes/page2_3_6.js');
+var page2_3_7Router = require('./dist/routes/page2_3_7.js');
+var page2_3_8Router = require('./dist/routes/page2_3_8.js');
+var page2_3_9Router = require('./dist/routes/page2_3_9.js');
+var page2_3_10Router = require('./dist/routes/page2_3_10.js');
+var page2_3_11Router = require('./dist/routes/page2_3_11.js');
 var page3Router = require('./dist/routes/page3.js');
 // 수정
 
@@ -65,12 +75,22 @@ app.use('/page1_3',page1_3Router);
 app.use('/page1_4',page1_4Router);
 app.use('/page2_1',page2_1Router);
 app.use('/page2_2',page2_2Router);
-app.use('/page2_3',page2_3Router);
+app.use('/page2_3_1',page2_3_1Router);
+app.use('/page2_3_2',page2_3_2Router);
+app.use('/page2_3_3',page2_3_3Router);
+app.use('/page2_3_4',page2_3_4Router);
+app.use('/page2_3_5',page2_3_5Router);
+app.use('/page2_3_6',page2_3_6Router);
+app.use('/page2_3_7',page2_3_7Router);
+app.use('/page2_3_8',page2_3_8Router);
+app.use('/page2_3_9',page2_3_9Router);
+app.use('/page2_3_10',page2_3_10Router);
+app.use('/page2_3_11',page2_3_11Router);
 app.use('/page3',page3Router);
 
 module.exports = app;
 
-var port = 4000;
+var port = 5000;
 var hostname = '192.168.0.137';
 
 app.use(function(req, res, next) {

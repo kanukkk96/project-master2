@@ -8,7 +8,7 @@ db_config.connect(conn);
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('views/page/page2-3.html');
+  res.render('views/page/page2-3-4.html');
 });
 
 

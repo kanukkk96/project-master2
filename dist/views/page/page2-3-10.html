@@ -27,7 +27,26 @@
                     <div class="container-fluid">
                         <h1 class="mt-4">데이터 컬럼 정의서</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">사건사고 데이터</li>
+                            <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+                                <div class="btn-group mr-2" role="group" aria-label="First group">
+                                  <button type="button" class="btn btn-secondary" onclick="location.href='/page2_3_1'">지역 문화 소장 자료 목록</button>
+                                  <button type="button" class="btn btn-secondary" onclick="location.href='/page2_3_2'">지역 문화 문서 자료 목록</button>
+                                  <button type="button" class="btn btn-secondary" onclick="location.href='/page2_3_3'">지역 문화 멀티 미디어 자료 목록</button>
+                                  <button type="button" class="btn btn-secondary" onclick="location.href='/page2_3_4'">지역 문화 VR 자료 목록</button>
+                                  <button type="button" class="btn btn-secondary" onclick="location.href='/page2_3_5'">지역 문화 기획 콘텐츠 자료 목록</button>
+                                </div>
+                            </div>
+                            <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+                                <div class="btn-group" role="group" aria-label="First group">
+                                  
+                                  <button type="button" class="btn btn-secondary" onclick="location.href='/page2_3_6'">지역 문화 콘텐츠 교과과정 추천 학년 분류표 자료 목록</button>
+                                  <button type="button" class="btn btn-secondary" onclick="location.href='/page2_3_7'">지역 문화 지역 명 출처 자료 목록</button>
+                                  <button type="button" class="btn btn-secondary" onclick="location.href='/page2_3_8'">지역 문화 민화 자료 목록</button>
+                                  <button type="button" class="btn btn-secondary" onclick="location.href='/page2_3_9'">지역 문화 성씨 자료 목록</button>
+                                  <button type="button" class="btn btn-secondary" onclick="location.href='/page2_3_10'">지역 문화 인물 자료 목록</button>
+                                  <button type="button" class="btn btn-secondary" onclick="location.href='/page2_3_11'">지역 문화 예술인 자료 목록</button>
+                                </div>
+                            </div>
                         </ol>
                         <div class="card mb-1">
                             <div class="card-header">
@@ -50,156 +69,129 @@
                                         </thead>
                                         <tbody>
                                             <td>1</td>
-                                            <td>DataSetType</td>
-                                            <td>데이터셋구분</td>
-                                            <td>VARCHAR</td>
-                                            <td>10</td>
-                                            <td>Y</td>
-                                            <td>Y</td>
-                                        </tbody>
-                                        <tbody>
-                                            <td>2</td>
-                                            <td>action</td>
-                                            <td>액션</td>
-                                            <td>VARCHAR</td>
-                                            <td>10</td>
-                                            <td>N</td>
-                                            <td>Y</td>
-                                        </tbody>
-                                        <tbody>
-                                            <td>3</td>
-                                            <td>content_id</td>
-                                            <td>식별자</td>
-                                            <td>VARCHAR</td>
+                                            <td>DATA_MANAGE_NO</td>
+                                            <td>데이터관리번호</td>
+                                            <td>DECIMAL</td>
                                             <td>30</td>
                                             <td>Y</td>
                                             <td>Y</td>
                                         </tbody>
                                         <tbody>
-                                            <td>4</td>
-                                            <td>send_date</td>
-                                            <td>발행일자</td>
-                                            <td>CHAR(8)(YYYYMMDD)</td>
-                                            <td>8</td>
+                                            <td>2</td>
+                                            <td>DATA_TITLE_NM</td>
+                                            <td>자료제목명</td>
+                                            <td>VARCHAR</td>
+                                            <td>500</td>
                                             <td>N</td>
-                                            <td>Y</td>
+                                            <td>N</td>
+                                        </tbody>
+                                        <tbody>
+                                            <td>3</td>
+                                            <td>SUMRY_CN</td>
+                                            <td>요약내용</td>
+                                            <td>VARCHAR</td>
+                                            <td>4000</td>
+                                            <td>N</td>
+                                            <td>N</td>
+                                        </tbody>
+                                        <tbody>
+                                            <td>4</td>
+                                            <td>CL_NM</td>
+                                            <td>분류명</td>
+                                            <td>VARCHAR</td>
+                                            <td>200</td>
+                                            <td>N</td>
+                                            <td>N</td>
                                         </tbody>
                                         <tbody>
                                             <td>5</td>
-                                            <td>send_time</td>
-                                            <td>발행시각</td>
-                                            <td>CHAR(6)(HHMISS)</td>
-                                            <td>6</td>
+                                            <td>LWPRT_CL_NM</td>
+                                            <td>하위분류명</td>
+                                            <td>VARCHAR</td>
+                                            <td>200</td>
                                             <td>N</td>
-                                            <td>Y</td>
+                                            <td>N</td>
                                         </tbody>
                                         <tbody>
                                             <td>6</td>
-                                            <td>urgency</td>
-                                            <td>긴급도</td>
+                                            <td>TY_NM</td>
+                                            <td>유형명</td>
                                             <td>VARCHAR</td>
-                                            <td>10</td>
+                                            <td>200</td>
                                             <td>N</td>
                                             <td>N</td>
                                         </tbody>
                                         <tbody>
                                             <td>7</td>
-                                            <td>category_name</td>
-                                            <td>통합분류(분야)</td>
+                                            <td>LWPRT_DATA_TY_NM</td>
+                                            <td>하위자료유형명</td>
                                             <td>VARCHAR</td>
-                                            <td>50</td>
+                                            <td>200</td>
                                             <td>N</td>
                                             <td>N</td>
                                         </tbody>
                                         <tbody>
                                             <td>8</td>
-                                            <td>region_name</td>
-                                            <td>지역분류</td>
+                                            <td>CTPRVN_NM</td>
+                                            <td>시도명</td>
                                             <td>VARCHAR</td>
-                                            <td>50</td>
+                                            <td>200</td>
                                             <td>N</td>
                                             <td>N</td>
                                         </tbody>
                                         <tbody>
                                             <td>9</td>
-                                            <td>class_name</td>
-                                            <td>내용분류(속성분류)</td>
+                                            <td>SIGNGU_NM</td>
+                                            <td>시군구명</td>
                                             <td>VARCHAR</td>
-                                            <td>50</td>
+                                            <td>200</td>
                                             <td>N</td>
                                             <td>N</td>
                                         </tbody>
                                         <tbody>
                                             <td>10</td>
-                                            <td>desk_name</td>
-                                            <td>발행부서</td>
+                                            <td>REGIST_DE</td>
+                                            <td>등록일자</td>
                                             <td>VARCHAR</td>
-                                            <td>10</td>
+                                            <td>8</td>
                                             <td>N</td>
-                                            <td>Y</td>
+                                            <td>N</td>
                                         </tbody>
                                         <tbody>
                                             <td>11</td>
-                                            <td>news_title</td>
-                                            <td>제목</td>
-                                            <td>VARCHAR</td>
-                                            <td>100</td>
+                                            <td>VLM_CO</td>
+                                            <td>권수</td>
+                                            <td>DECIMAL</td>
+                                            <td>38</td>
                                             <td>N</td>
-                                            <td>Y</td>
+                                            <td>N</td>
                                         </tbody>
                                         <tbody>
                                             <td>12</td>
-                                            <td>sub_title</td>
-                                            <td>부제목</td>
-                                            <td>VARCHAR</td>
-                                            <td>100</td>
+                                            <td>TOT_PGE_CO</td>
+                                            <td>총페이지수</td>
+                                            <td>DECIMAL</td>
+                                            <td>38</td>
                                             <td>N</td>
                                             <td>N</td>
                                         </tbody>
                                         <tbody>
                                             <td>13</td>
-                                            <td>char_keyword</td>
-                                            <td>인물 키워드</td>
+                                            <td>MAIN_THUMB_URL</td>
+                                            <td>메인썸네일URL</td>
                                             <td>VARCHAR</td>
-                                            <td>100</td>
+                                            <td>500</td>
                                             <td>N</td>
                                             <td>N</td>
                                         </tbody>
                                         <tbody>
                                             <td>14</td>
-                                            <td>loc_keyword</td>
-                                            <td>위치 키워드</td>
+                                            <td>CNTNTS_URL</td>
+                                            <td>콘텐츠URL</td>
                                             <td>VARCHAR</td>
-                                            <td>100</td>
-                                            <td>N</td>
-                                            <td>N</td>
-                                        </tbody>
-                                        <tbody>
-                                            <td>15</td>
-                                            <td>org_keyword</td>
-                                            <td>기관 키워드</td>
-                                            <td>VARCHAR</td>
-                                            <td>100</td>
-                                            <td>N</td>
-                                            <td>N</td>
-                                        </tbody>
-                                        <tbody>
-                                            <td>16</td>
-                                            <td>keywords</td>
-                                            <td>키워드</td>
-                                            <td>VARCHAR</td>
-                                            <td>100</td>
-                                            <td>N</td>
-                                            <td>N</td>
-                                        </tbody>
-                                        <tbody>
-                                            <td>17</td>
-                                            <td>news_url</td>
-                                            <td>원본링크</td>
-                                            <td>VARCHAR</td>
-                                            <td>50</td>
-                                            <td>N</td>
-                                            <td>N</td>
+                                            <td>200</td>
+                                            <td>500</td>
+                                            <td>Y</td>
                                         </tbody>
                                     </table>
                                 </div>
