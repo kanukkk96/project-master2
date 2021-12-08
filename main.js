@@ -27,7 +27,7 @@ var page2_1Router = require('./dist/routes/page2_1.js');
 var page2_2Router = require('./dist/routes/page2_2.js');
 var page2_3Router = require('./dist/routes/page2_3.js');
 var page3Router = require('./dist/routes/page3.js');
-
+// 수정
 
 app.use(logger('dev'));
 app.use(cookieParser());
